@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* h1:hover {
+            background-color: aqua;
+        } */ 
+        /* It can also be done for a selective tag */
+        .selected:hover{ 
+            background-color: aqua;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input:focus {
+            font-size: 20px;
+            color: blueviolet;
+        }
+        li:nth-child(2n) {
+            list-style-type: square; 
+            background-color: gray;
+            width: 50%;
+            font-size: 20px;
+        }
+        li:hover {
+            background-color: indianred;
+            width: 50%;
+        }
+        div {
+            border: 5px solid firebrick;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="selected">First Header</h1>
+    <h1>Second Header</h1>
+    <h1>Third Header</h1>
+
+    <input name="email" type="text">
+    <br>
+    <input name="password" type="text">
+
+    <br><br>
+    <div>
+    <ul>
+        <li>Apurbo</li>
+        <li>Sushmita</li>
+        <li>Surjo</li>
+        <li>Arja</li>
+        <li>Anondo</li>
+    </ul>
+    </div>
+    
+</body>
+</html>
