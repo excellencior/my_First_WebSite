@@ -28,6 +28,13 @@
             border: 5px solid firebrick;
             width: 50%;
         }
+        body {
+            counter-reset: hello;
+        }
+        p::before {
+            counter-increment: hello;
+            content: "Country " counter(hello) ": ";
+        }
     </style>
 </head>
 <body>
@@ -49,6 +56,13 @@
         <li>Anondo</li>
     </ul>
     </div>
+
+    <p>Bangladesh</p>
+    <p>India</p>
+    <p>England</p>
+    <p>America</p>
+    <p>Switzerland</p>
+    <p>Japan</p>
     
 </body>
 </html>
