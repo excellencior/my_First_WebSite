@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Position of Contents</title>
+    <style>
+        .blog {
+            width: 50%;
+            background-color: aqua;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        #first {
+            background-color: blue;
+        }
+        #second {
+            background-color: brown;
+            /* The tile will move 20px to the right and 40px to top relative to the position */
+            /* position: relative;
+            left: 20px;
+            bottom: 40px; */
+
+            /* The tile will stay at a constant position in the monitor */
+            /* position: fixed; */
+            /* left: 120px; */
+
+            /* It moves along the nearest positioned ancestor 
+            If there is no ancestor then it consumes the document body
+            If the tile is shifted the the predecessor takes the ancestor tile's place */
+            /* position: absolute;
+            left: 120px; */
+        }
+        #third {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>There are 3 positions</h1>
+        <h3>Relative, Absolute, Static, Fixed, Sticky</h3>
+    </section>
+    <section class="blog">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
