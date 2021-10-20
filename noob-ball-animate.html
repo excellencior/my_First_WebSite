@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ball Animation</title>
+    <style>
+        
+        .ball {
+            background-color: chocolate;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            position: absolute;
+            animation: slidein 2s ease-in-out infinite alternate;
+        }
+        .stage {
+            background-color: cornflowerblue;
+            height: 400px;
+            width: 600px;
+        }
+        @keyframes slidein {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            50% {
+                left: 250px;
+                top: 330px;
+                height: 80px;
+                width: 110px;
+                background-color: darkgoldenrod;
+            }
+            100% {
+                left: 500px;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
