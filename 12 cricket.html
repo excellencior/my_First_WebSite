@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cricket Bat & Ball</title>
+    <style>
+        .bat {
+            transition: transform 0.5s ease-in;
+        }
+        .bat:hover {
+            transform-origin: 100% 0%;
+            transform: rotate(-60deg);
+        }
+        .ball {
+            background-color: brown;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: relative;
+            left: 520px;
+            transition: transform 1s ease 0.5s;
+        }
+        .play:hover .ball {
+            transform: translate(800px, -400px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="play">
+        <img class="bat" src="Images/bat.png" alt="">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
