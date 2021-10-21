@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Media Flexible</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex wrap (wraps the contents with the screen size) a good alternative to media query */
+            max-width: 1200px;
+            justify-content: center;
+        }
+        .flag {
+            border: 2px solid lightcoral;
+            border-radius: 20px;
+            margin: 10px;
+            padding: 5px;
+            width: 150px;
+        }
+        .flag img {
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .flag {
+                background-color: lightslategrey;
+                width: 400px;
+            }
+        }
+        @media (min-width: 1200px) {
+            .flag {
+                background-color: mediumseagreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flag">
+            <img src="Images/flag.jpg" alt="">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt facilis nesciunt officiis voluptatibus autem dolorem maxime. Deserunt rem vel consequatur earum totam architecto, ullam exercitationem eius praesentium eveniet eos! Incidunt dolores sapiente repellat ab, impedit ullam est asperiores deleniti dolore commodi ex minus animi non accusantium? Earum consectetur dignissimos modi?</p>
+        </div>
+        <div class="flag">
+            <img src="Images/flag.jpg" alt="">
+            <p>Minus similique mollitia facere nostrum vel tempore, repellendus provident tempora neque debitis quas expedita exercitationem, sint nisi, veritatis quaerat voluptate. Perspiciatis magnam optio, voluptatem expedita consequatur fugiat? Ea sequi saepe a voluptates animi ipsum esse exercitationem quia vitae architecto laborum maiores mollitia quaerat dolorum fuga corrupti optio, perspiciatis, nihil labore!</p>
+        </div>
+        <div class="flag">
+            <img src="Images/flag.jpg" alt="">
+            <p>Tenetur fugiat, amet ipsam soluta vero, dolores voluptate dicta quas, quae debitis veritatis repudiandae aspernatur alias obcaecati! Sequi dolores labore perspiciatis cum aliquid quo nobis, iusto, architecto dicta saepe necessitatibus eaque impedit, inventore quisquam perferendis quibusdam ducimus totam! Itaque ratione ullam quisquam necessitatibus sed, blanditiis sint! Deleniti qui facere nemo!</p>
+        </div>
+        <div class="flag">
+            <img src="Images/flag.jpg" alt="">
+            <p>Odit sequi animi iusto fuga pariatur quisquam accusantium voluptatem aspernatur laudantium tenetur! Ipsa ducimus doloribus voluptatum illum voluptates nam ratione provident hic maiores nobis accusamus, dolore quisquam eveniet quos ipsum fugit alias perferendis necessitatibus! Accusantium quis, ducimus magni numquam voluptas assumenda, ad, iusto qui consequuntur sequi consequatur voluptatibus accusamus quisquam!</p>
+        </div>
+        <div class="flag">
+            <img src="Images/flag.jpg" alt="">
+            <p>Numquam incidunt aperiam quisquam eius maiores facilis deserunt sequi, iure tenetur, ullam placeat excepturi dolorem tempora, molestias ipsum ducimus cumque nemo ipsa possimus voluptatibus aspernatur exercitationem quia cupiditate. Rerum sunt sequi quo ipsam expedita! Aspernatur autem iusto minima voluptatibus ipsam ea, dolore minus commodi aut esse impedit labore maiores harum.</p>
+        </div>
+    
+    </div>
+</body>
+</html>
