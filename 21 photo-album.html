@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album</title>
+    <style>
+        .photo-album {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .photo-frame {
+            border: 3px solid black;
+            width: 300px;
+            height: 187px;
+            position: relative;
+            margin: 1%;
+            overflow: hidden;
+        }
+        .photo-frame .photo img {
+            width: 100%;
+        }
+        .photo-detail {
+            position: absolute;
+            display: none;
+            width: 300px;
+            height: 187px;
+            top: 0;
+        }
+        .photo-frame:hover .photo-detail {
+            display: block;
+            background-color: rgba(248, 244, 225, 0.6);
+        }
+        .photo-frame:hover .photo-detail h3 {
+            background-color: white;
+            text-align: center;
+        }
+        .photo-frame:hover .photo img {
+            transform: scale(1.5);
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-album">
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="goku.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Friendship</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus doloribus dolorem sint, commodi sapiente earum</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="goku.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Friendship</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus doloribus dolorem sint, commodi sapiente earum</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="goku.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Friendship</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus doloribus dolorem sint, commodi sapiente earum</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="goku.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Friendship</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus doloribus dolorem sint, commodi sapiente earum</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="goku.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Friendship</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus doloribus dolorem sint, commodi sapiente earum</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="goku.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Friendship</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus doloribus dolorem sint, commodi sapiente earum</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="goku.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Friendship</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus doloribus dolorem sint, commodi sapiente earum</p>
+            </div>
+        </div>
+        <div class="photo-frame">
+            <div class="photo">
+                <img src="goku.jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Friendship</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero necessitatibus doloribus dolorem sint, commodi sapiente earum</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
