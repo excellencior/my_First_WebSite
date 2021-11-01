@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing styles with java-script</title>
+    <style>
+        .article {
+            border: 5px solid darkblue;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <div class="article">
+                <h3>Article-1</h3>
+                <div class="author">
+                    <h5>Author-1</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur magnam velit perspiciatis eligendi earum iure nihil voluptatem quisquam molestiae, vel, aspernatur debitis mollitia fugiat aliquam animi provident, facilis temporibus cumque.</p>
+                </div>
+            </div>
+            <div class="article">
+                <h3>Article-2</h3>
+                <div class="author">
+                    <h5>Author-2</h5>
+                    <p>Dolor provident nisi ex ipsam tempore? Optio id vero nostrum explicabo eum! Commodi labore repudiandae obcaecati minima voluptatibus nihil molestiae voluptate eos laborum ducimus. Nostrum aperiam vero minus odit nulla.</p>
+                </div>
+            </div>
+            <div class="article">
+                <h3>Article-3</h3>
+                <div class="author">
+                    <h5>Author-3</h5>
+                    <p>Eaque dolor sit accusantium illo sequi quaerat officiis ab placeat beatae! Id quod recusandae reprehenderit veniam maxime exercitationem deleniti qui dignissimos ad non commodi velit blanditiis doloremque, autem in odit.</p>
+                </div>
+            </div>
+            <div class="article">
+                <h3>Article-4</h3>
+                <div class="author">
+                    <h5>Author-4</h5>
+                    <p>Repellendus eaque corporis alias iusto quos saepe illo quasi. Quidem incidunt magnam rem, ipsam quaerat sint minus deserunt? Numquam provident atque magni tempore ab, iusto obcaecati veritatis voluptate nostrum modi?</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script>
+        var elements = document.getElementsByClassName('article');
+        for (var i = 0; i<elements.length; i++) {
+            var edit = elements[i];
+            edit.style.backgroundColor = 'lightgreen';
+        }
+        console.log(elements);
+    </script>
+</body>
+</html>

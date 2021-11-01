@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            border: 5px solid blueviolet;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <article class="article" id="art-1">
+            <h3>Article-1</h3>
+            <p class="author">Author-1</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, nemo numquam? Eligendi ipsa ut eaque
+                maiores placeat quam maxime iure.</p>
+        </article>
+        <article class="article">
+            <h3>Article-2</h3>
+            <p class="author">Author-2</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, nemo numquam? Eligendi ipsa ut eaque
+                maiores placeat quam maxime iure.</p>
+        </article>
+        <article class="article">
+            <h3>Article-3</h3>
+            <p class="author">Author-3</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, nemo numquam? Eligendi ipsa ut eaque
+                maiores placeat quam maxime iure.</p>
+        </article>
+        <article class="article" id="art-4">
+            <h3>Article-4</h3>
+            <p class="author">Author-4</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, nemo numquam? Eligendi ipsa ut eaque
+                maiores placeat quam maxime iure.</p>
+        </article>
+    </section>
+    <script>
+        const parent = document.getElementById('art-1'); // It can be accessed by id but not with class >> Dunno why
+        const newParagraph = document.createElement("p");
+        newParagraph.innerText = 'Added by JavaScript';
+        parent.appendChild(newParagraph);
+
+        const parent4 = document.getElementById('art-4');
+        const newList = document.createElement('ul');
+        for (var i = 0; i<4; i++) {
+            const listElements = document.createElement('li');
+            listElements.innerText = 'Hello - ' + (i+1);
+            newList.appendChild(listElements);// adding list elements to ul
+
+
+            listElements.style.backgroundColor = "lightblue";
+            listElements.style.margin = '15px';
+        }
+        
+        parent4.appendChild(newList);
+
+    </script>
+</body>
+
+</html>
