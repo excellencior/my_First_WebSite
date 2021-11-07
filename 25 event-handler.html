@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>My List he he</h1>
+        <div id="my-list">
+            <ul>
+                <li class="item">Hello World - 1</li>
+                <li class="item">Hello World - 2</li>
+                <li class="item">Hello World - 3</li>
+                <li class="item">Hello World - 4</li>
+                <li class="item">Hello World - 5</li>
+                <li class="item">Hello World - 6</li>
+                <li class="item">Hello World - 7</li>
+                <li class="item">Hello World - 8</li>
+            </ul>
+        </div>
+    </div>
+    <button id="addNew">Add new</button>
+    <script>
+
+        // function removeItem() {
+        //     var itemsList = document.getElementsByTagName('li');
+        //     for (var i = 0; i < itemsList.length; i++) {
+        //         var item = itemsList[i];
+        //         item.addEventListener('click', function (event) {
+        //             event.target.parentNode.removeChild(event.target);
+        //         })
+        //     }
+        // }
+
+        // document.getElementById('addNew').addEventListener('click', function (event) {
+        //     var ul = document.getElementById('my-list');
+        //     var newListItem = document.createElement('li');
+        //     newListItem.innerHTML = "Hello World";
+        //     ul.appendChild(newListItem);
+        //     removeItem();
+        // })
+
+        // This is one way to remove the new elements form the list items
+
+        document.getElementById('my-list').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target);
+        })
+        // event bubble
+        // In this case the parent is the click zone and the specific item is selected through hovering and that specific items or newly added items are now in action
+
+        document.getElementById('addNew').addEventListener('click', function (event) {
+            var ul = document.getElementById('my-list');
+            var newListItem = document.createElement('li');
+            newListItem.innerHTML = "Hello World";
+            ul.appendChild(newListItem);
+        })
+
+    </script>
+</body>
+
+</html>
