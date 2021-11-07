@@ -6,3 +6,9 @@ console.log(finalName);
 // Various calculations are possible withing the curly brace
 let finalName2 = `${name1} had ${2+5} pet dogs`;
 console.log(finalName2);
+
+// ES6 even gives newline from written code syntax
+let longString = `Hello World
+I hope all the people of the world are living happily and merrily
+Blessing to all`;
+console.log(longString);
