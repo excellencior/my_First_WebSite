@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Array of Images</title>
+</head>
+<body>
+    <!-- <img src="" alt="" id="1" width="600px">
+    <img src="" alt="" id="2" width="600px"> -->
+    <!-- A dynamic way of showing array of images -------------------------------- -->
+
+    <script>
+        const images = ['goku.jpg', 'Images/flag.jpg'];
+        
+        for (let i=0; i<images.length; i++) {
+            fetch(images[i])
+            .then(response => response.blob())
+            .then(blob => {
+                console.log(blob);
+                // document.getElementById("" + 1).src = URL.createObjectURL(blob);
+                const img = document.createElement('img');
+                img.src = URL.createObjectURL(blob);
+                img.style.width = '600px';
+                document.body.appendChild(img);
+            })
+        }
+    </script>
+</body>
+</html>
