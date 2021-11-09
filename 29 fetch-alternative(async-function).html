@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Function</title>
+</head>
+
+<body>
+    <img src="" id="goku" width="600px">
+
+    <script>
+        catchPhoto()
+        .then(response => {
+            console.log("Finally Doing it");
+        }).catch(error => {
+            console.error(error);
+        });
+        // Also for this live server needs to be stayed open
+        async function catchPhoto() {
+            const response = await fetch('goku.jpg');
+            const blob = await response.blob();
+            document.getElementById('goku').src = URL.createObjectURL(blob);
+        }
+    </script>
+</body>
+
+</html>
