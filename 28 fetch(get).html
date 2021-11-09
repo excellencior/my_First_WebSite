@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Simple Image</title>
+</head>
+<body>
+    <img src="" alt="Goku and Vegeta" id="goku" width="1000px">
+
+    <script>
+        // to get fetch() to work live server is needed. fetch() directly communicates with a server
+        console.log("Hello to my dumb ass");
+        fetch('goku.jpg').then(response => {
+            console.log(response);
+            return response.blob();
+        }).then (gotBlob => {
+            console.log(gotBlob);
+            document.getElementById("goku").src = URL.createObjectURL(gotBlob);
+        })
+    </script>
+</body>
+</html>
