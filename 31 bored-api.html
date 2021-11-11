@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching and Loading</title>
+</head>
+<body>
+    <h3>Leisure Time Activity List</h3>
+    <button id="refresh">Randomize</button>
+    <ul id="activity-list">
+        <li id="1"></li>
+        <li id="2"></li>
+        <li id="3"></li>
+    </ul>
+
+    <script>
+    const list = document.getElementById("activity-list");
+    function getActivitySuggestion() {
+        fetch("https://www.boredapi.com/api/activity/")
+        .then(response => response.json())
+        .then(load => {
+            console.log(load);
+            // const newElement = document.createElement('li');
+            // newElement.innerText = "Activity : " + load.activity;
+            // list.appendChild(newElement);
+            document.getElementById("1").innerText = "Activity : " + load.activity;
+            document.getElementById("2").innerText = "Type : " + load.type;
+            document.getElementById("3").innerText = "Participants : " + load.participants;
+        })
+    }
+
+    document.getElementById("refresh").addEventListener("click", function() {
+        // window.location.reload();
+        getActivitySuggestion();
+    })
+        
+    </script>
+</body>
+</html>
